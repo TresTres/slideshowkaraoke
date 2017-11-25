@@ -4,7 +4,13 @@ import ReactFontFace from 'react-font-face';
 //Slides
 import Title from './Slides/Title.jsx';
 
+//slide gen
 
+
+
+
+//slide deck
+const slides = 
 
 //presentation
 class Presentation extends React.Component
@@ -14,6 +20,7 @@ class Presentation extends React.Component
         return(
                 <Title 
                 query = 'potato'
+                title = 'P O T A T O'
                 />
               );
     }

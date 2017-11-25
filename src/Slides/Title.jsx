@@ -1,3 +1,4 @@
+/*jshint eversion: 6*/
 //Title.js
 import React from 'react';
 import {TitleSlide} from 'react-presents';
@@ -8,16 +9,24 @@ import ImageSourcing from '../ImageSource.jsx';
 
 
 class Title extends React.Component
-{  
+{
     constructor(props)
     {
         super(props);
-        this.state = 
+        this.state =
         {
-            title: 'Default Title',
-            image: 'http://media.gettyimages.com/photos/suspicious-cat-portrait-picture-id538412497',
-            query: props.query
+            query: props.query,
+            myTitle: props.title
         };
+
+    }
+    componentWillMount()
+    {
+        this.setState(
+                {
+                    title: 'Please wait...',
+                    image: 'http://media.gettyimages.com/photos/suspicious-cat-portrait-picture-id538412497',
+                });
     }
     componentDidMount()
     {
@@ -26,6 +35,7 @@ class Title extends React.Component
                   {
                       this.setState(
                               {
+                                title: this.state.myTitle,
                                 image: data.images[0].display_sizes[0].uri
                               });
                   }.bind(this))
@@ -34,18 +44,17 @@ class Title extends React.Component
                       console.log(err);
                   }
                  );
-                              
     }
     render()
     {
         return(
                 <TitleSlide>
                     <h1>{this.state.title}</h1>
-                    <h1>{this.state.query}</h1>
                     <img src = {this.state.image} alt = "image goes here"/>
                 </TitleSlide>
               );
     }
 }
+
 
 export {Title as default};
