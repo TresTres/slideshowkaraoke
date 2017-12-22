@@ -10,7 +10,7 @@ import Title from './Slides/Title.jsx';
 
 
 //slide deck
-const slides = 
+//const slides = 
 
 //presentation
 class Presentation extends React.Component
@@ -19,7 +19,7 @@ class Presentation extends React.Component
     {
         return(
                 <Title 
-                query = 'potato'
+                query = 'horse'
                 title = 'P O T A T O'
                 />
               );

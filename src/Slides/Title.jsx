@@ -1,5 +1,5 @@
 /*jshint eversion: 6*/
-//Title.js
+//Title.jsx
 import React from 'react';
 import {TitleSlide} from 'react-presents';
 //ImageSourcing
