@@ -1,0 +1,15 @@
+/*styles.css*/
+/*building styles*/
+
+:root
+{
+	background-color: #5F6A72;
+	padding: 3em;
+}
+
+.Slide
+{
+	margin: auto;
+	text-align: center;
+	color: red;
+}

@@ -19,7 +19,7 @@ class Presentation extends React.Component
     {
         return(
                 <Title 
-                query = 'horse'
+                query = 'street'
                 title = 'P O T A T O'
                 />
               );
