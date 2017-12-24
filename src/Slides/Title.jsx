@@ -1,6 +1,5 @@
 //Title.jsx
 import React from 'react';
-import {TitleSlide} from 'react-presents';
 //ImageSourcing
 import ImageSourcing from '../ImageSource.jsx';
 //waitImage
