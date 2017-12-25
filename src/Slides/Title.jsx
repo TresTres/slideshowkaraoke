@@ -1,4 +1,4 @@
-//Title.jsx
+//Title.jsxb
 import React from 'react';
 //ImageSourcing
 import ImageSourcing from '../ImageSource.jsx';
@@ -12,8 +12,9 @@ class Title extends React.Component
         super(props);
         this.state =
         {
-            query: props.query,
-            myTitle: props.title,
+            imageQuery: props.query,
+			authToken: props.token,
+            myTitle: props.title
         };
 
     }
@@ -29,7 +30,7 @@ class Title extends React.Component
 	
     componentDidMount()
     {
-        ImageSourcing.findCreativeImg(this.state.query)
+        ImageSourcing.findCreativeImg(this.state.imageQuery, this.state.authToken)
 		.then(function(data)
 		{
 			this.setState(

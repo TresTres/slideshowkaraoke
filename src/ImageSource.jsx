@@ -1,7 +1,7 @@
 //ImageSource.jsx
 import React from 'react';
 	
-import {gettyEmbedKey, gettyEmbedSecret} from './config.js';
+import {gettySandboxKey, gettySandboxSecret} from './config.js';
 import axios from 'axios';
 											
 
@@ -16,11 +16,8 @@ const ImageSourcing =
 		{
 			type:'POST',
 			url:'https://connect.gettyimages.com/oauth2/token',
-			headers:
-			{
-				'client_id': gettyEmbedKey,
-				'client_secret': gettyEmbedSecret
-			}
+			data:'grant_type=client_credentials&client_id=' + encodeURIComponent(gettySandboxKey) + 
+			'&client_secret=' + encodeURIComponent(gettySandboxSecret)
 		})
 		.then(function(response)
 		{
@@ -53,10 +50,10 @@ const ImageSourcing =
         var axiosPromise = axios(
         {
             type:'GET',
-            url:'https://connect.gettyimages.com/v3/search/images/creative?fields=allowed_use%2Cdisplay_set&license_models=royaltyfree&orientations=Horizontal&exclude_nudity=true&phrase=' + query,
+            url:'https://api.gettyimages.com/v3/search/images/creative?fields=allowed_use%2Cdisplay_set&license_models=royaltyfree&orientations=Horizontal&exclude_nudity=true&phrase=' + query,
             headers:
             {
-                'Api-Key': gettyEmbedKey,
+                'Api-Key': gettySandboxKey,
 				'Authorization': authorization,
                 'Accept': 'application/json'
 		    }
