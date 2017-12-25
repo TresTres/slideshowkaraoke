@@ -1,10 +1,8 @@
 //SlideGen.js
 import React from 'react';
-import ReactFontFace from 'react-font-face';
 //Slides
 import Title from './Slides/Title.jsx';
 
-//slide gen
 
 
 
@@ -20,18 +18,11 @@ class Presentation extends React.Component
         return(
                 <Title 
                 query = 'street'
-                title = 'P O T A T O'
+                title = 'Title'
                 />
               );
     }
 
 };
-//font configuration 
-let fontConfig = 
-{
-    google: 
-        [ 'Bree Serif' ]
-};
-
-export default ReactFontFace(Presentation, fontConfig);
+export default Presentation;
 

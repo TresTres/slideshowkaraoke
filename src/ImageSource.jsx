@@ -53,7 +53,7 @@ const ImageSourcing =
         var axiosPromise = axios(
         {
             type:'GET',
-            url:'https://connect.gettyimages.com/v3/search/images/creative?fields=allowed_use%2Cdisplay_set&phrase=' + query,
+            url:'https://connect.gettyimages.com/v3/search/images/creative?fields=allowed_use%2Cdisplay_set&license_models=royaltyfree&orientations=Horizontal&exclude_nudity=true&phrase=' + query,
             headers:
             {
                 'Api-Key': gettyEmbedKey,

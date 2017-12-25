@@ -5,8 +5,6 @@ import ImageSourcing from '../ImageSource.jsx';
 //waitImage
 import {waitImage} from '../config.js';
 
-import '../styles.css';
-
 class Title extends React.Component
 {
     constructor(props)
@@ -49,9 +47,9 @@ class Title extends React.Component
     render()
     {
         return(
-				<div className = "Slide">
-                    <h1>{this.state.title}</h1>
-                    <img src = {this.state.image} alt = "image goes here"/>
+				<div class = "SlideBox">
+					<h1 class = "PresentationTitle">{this.state.title}</h1>
+					<img src = {this.state.image} alt = "image goes here"/>
 				</div>
               );
     }
