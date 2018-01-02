@@ -30,7 +30,7 @@ class Title extends React.Component
 	
     componentDidMount()
     {
-        ImageSourcing.findCreativeImg(this.state.imageQuery, this.state.authToken)
+        ImageSourcing.findCreativeImg(this.state.imageQuery)
 		.then(function(data)
 		{
 			this.setState(
@@ -48,8 +48,8 @@ class Title extends React.Component
     render()
     {
         return(
-				<div class = "SlideBox">
-					<h1 class = "PresentationTitle">{this.state.title}</h1>
+				<div className = "SlideBox">
+					<h1 className = "PresentationTitle">{this.state.title}</h1>
 					<img src = {this.state.image} alt = "image goes here"/>
 				</div>
               );

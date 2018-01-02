@@ -17,7 +17,6 @@ class Presentation extends React.Component
                 <Title 
                 query = 'street'
                 title = 'Title'
-				token = {ImageSourcing.getAuthorization()}
                 />
               );
     }

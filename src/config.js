@@ -1,10 +1,8 @@
 //config.js
 module.exports = 
 {
-    gettyEmbedKey: '3839swb23cqkh6hc2b8pgvga',
-    gettyEmbedSecret: 'VJ4552NzEYeDxkF7PAs8rbFPtNmJZU57Uk5a49HR3msYv',
-	gettySandboxKey: '3xqcr2vwtmvucg8eq4xekwgt',
-	gettySandboxSecret: 'FD2Fm5t9TTe8Gad6Y9AeE4xKXry8HUfBqTQueVNgs2Xvy',
-    
-    waitImage: 'https://media.gettyimages.com/photos/crushed-time-picture-id145668841'
+	shutterstock_id: '5a044-541a1-8c93a-d0cb1-d2261-00389',
+	shutterstock_secret: '97396-a2651-2bf9e-85bc6-7e993-77ff0',
+	
+	waitImage: 'https://media.giphy.com/media/d3yxg15kJppJilnW/source.gif'
 }
