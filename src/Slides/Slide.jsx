@@ -1,11 +1,11 @@
-//Title.jsxb
+//Slide.jsx
 import React from 'react';
 //ImageSourcing
 import ImageSourcing from '../ImageSource.jsx';
 //waitImage
 import {waitImage} from '../config.js';
 
-class Title extends React.Component
+class Slide extends React.Component
 {
     constructor(props)
     {
@@ -19,7 +19,7 @@ class Title extends React.Component
 
     }
 
-    componentWillMount()
+    componentWillMount() //loading, use the default gif
     {
         this.setState(
 		{
@@ -28,15 +28,19 @@ class Title extends React.Component
 		});
     }
 	
-    componentDidMount()
+    componentDidMount() //successful data returned from shutterstock API
     {
         ImageSourcing.findCreativeImg(this.state.imageQuery)
-		.then(function(data)
+		.then(function(responseData)
 		{
+			//console.log(responseData);
 			this.setState(
 			{
 				title: this.state.myTitle,
-				image: data.images[0].display_sizes[0].uri
+				image: responseData.data[5].assets.preview.url
+				//I did not structure it to be this way
+				//There are 20 possible entries in the results list 
+				//data[i].assets.preview.url gives the largest jpg usually
 			});
 		}.bind(this))
 		.catch(function(err)
@@ -48,13 +52,15 @@ class Title extends React.Component
     render()
     {
         return(
-				<div className = "SlideBox">
-					<h1 className = "PresentationTitle">{this.state.title}</h1>
+				<div className = "SlideContainer">
 					<img src = {this.state.image} alt = "image goes here"/>
+					<text>{this.state.title}</text>
 				</div>
               );
     }
 }
 
 
-export {Title as default};
+
+
+export {Slide as default};

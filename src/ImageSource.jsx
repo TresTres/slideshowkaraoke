@@ -2,10 +2,8 @@
 import React from 'react';
 	
 import {shutterstock_id, shutterstock_secret} from './config.js';
-import axios from 'axios';
-											
+import axios from 'axios'; //promise based HTTP client
 
-//axios uses promises
 //OAuth not necessary for this application with Shutterstock
 
 const ImageSourcing = 
@@ -36,7 +34,7 @@ const ImageSourcing =
 	//search for image - want to only do this once per slide deck
     findCreativeImg(query)
     {
-		const APIEndpoint = 'https:/api.shutterstock.com/v2';
+		const APIEndpoint = 'https://api.shutterstock.com/v2';
 
 		let authorization = this.encodeAuthorization();
 		//authorization failed, error handled already
@@ -50,7 +48,10 @@ const ImageSourcing =
         {
 			type: 'GET',
 			url: APIEndpoint + '/images/search',
-			params: 'query=' + query,
+			params:
+			{
+				query : query
+			},
 			headers: 
 			{
 				Authorization: authorization
@@ -59,7 +60,6 @@ const ImageSourcing =
         })
         .then(function(response)
 		{
-			console.log('image search successful');
 			return response.data;
 		})
 		.catch(function(err)
