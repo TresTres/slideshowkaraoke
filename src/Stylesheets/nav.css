@@ -1,0 +1,59 @@
+@import url("https://fonts.googleapis.com/css?family=Patua+One");
+@import url("https://fonts.googleapis.com/css?family=Oswald");
+:root {
+  background-color: #5F6A72;
+  padding: 1em; }
+
+ul.header {
+  background-color: #CC0033;
+  padding: 0; }
+  ul.header li {
+    display: inline;
+    list-style-type: none;
+    margin: 0; }
+    ul.header li a {
+      color: #F8F8FF;
+      font-weight: bold;
+      padding: 20px;
+      display: inline-block; }
+    ul.header li .selected {
+      background-color: #FFB6C1; }
+
+.content {
+  padding: 20px; }
+  .content h2 {
+    text-align: center;
+    font-family: "Patua One", cursive;
+    font-size: 40px; }
+
+.dropdown {
+  position: absolute;
+  top: 50%;
+  left: 65%;
+  transform: translate(0%, -50%); }
+  .dropdown select {
+    position: relative;
+    display: block;
+    width: 30em;
+    height: 4em;
+    margin: 0;
+    padding: 0 0 0 .5em;
+    border-radius: .25em;
+    outline: 0;
+    box-shadow: none;
+    background: #696969;
+    color: #F8F8FF;
+    overflow: hidden;
+    cursor: pointer; }
+    .dropdown select ::ms-expand {
+      display: none; }
+    .dropdown select ::after {
+      content: '\25BC';
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      padding: 0 1em;
+      transition: .25s all ease; }
+    .dropdown select :hover::after {
+      color: #5F6A72; }

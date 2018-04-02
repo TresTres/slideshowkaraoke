@@ -1,0 +1,109 @@
+//nav.scss
+//import
+@import "master";
+
+//Font Variables
+$title_font: 'Patua One', cursive;
+
+:root 
+{
+	background-color: $background_color;
+	padding: 1em;
+}
+
+ul.header
+{
+	li
+	{
+		display: inline;
+		list-style-type: none;
+		margin: 0;
+		a
+		{
+			color: $ghostwhite;
+			font-weight: bold;
+			padding: 20px;
+			display: inline-block;
+
+		}
+		.selected
+		{
+			background-color: $lightpink;
+		}
+
+	}
+	background-color: $scarlet;
+	padding: 0;
+
+}
+
+.content
+{
+	h2
+	{
+		text-align: center;
+		font-family: $title_font;
+		font-size: 40px;
+	}
+	padding: 20px;
+}
+
+.dropdown
+{
+	//positioning
+	position: absolute;
+	top: 50%;
+	left: 65%;
+	transform: translate(0%, -50%);
+	
+
+	select
+	{
+
+		//sizing
+		position: relative;
+		display: block;
+		width: 30em;
+		height: 4em;
+
+	
+		//margins
+		margin: 0;
+		padding: 0 0 0 .5em;
+		//bordering
+		border-radius: .25em;
+		outline: 0;
+		box-shadow: none;
+		//coloring
+		background: $dimgray;
+		color: $ghostwhite;
+		//text
+		overflow: hidden;
+		//cursor
+		cursor: pointer;
+	
+		::ms-expand
+		{
+			display: none;
+		}
+
+		::after
+		{
+			content: '\25BC';
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			padding: 0 1em;
+			transition: .25s all ease;
+
+		}
+		
+		:hover::after
+		{
+			color: $background_color;
+		}
+
+	}
+
+}
