@@ -1,4 +1,47 @@
+<<<<<<< HEAD
 # See https://help.github.com/ignore-files/ for more about ignoring files.
+=======
+# Numerous always-ignore extensions
+*.diff
+*.err
+*.orig
+*.log
+*.rej
+*.swo
+*.swp
+*.vi
+*~
+*.sass-cache
+
+# OS or Editor folders
+# .DS_Store
+# .cache
+# .project
+# .settings
+# .tags
+# .tmproj
+# nbproject
+# Thumbs.db
+# tags
+#
+# # NPM packages folder.
+# node_modules/
+#
+# # Brunch folder for temporary files.
+# tmp/
+#
+# # Brunch output folder.
+# public/
+#
+# # Bower stuff.
+# bower_components/
+#
+# # API Docs
+# docs/api/
+#
+# # DotEnv
+# .envSee https://help.github.com/ignore-files/ for more about ignoring files.
+>>>>>>> d9d9bf173601d4dcb30937b05c6078ff5d1f45cf
 
 # dependencies
 /node_modules
